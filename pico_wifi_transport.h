@@ -1,3 +1,5 @@
+// Code from https://github.com/PICO-MAZING/micro_ros_raspberrypi_pico_sdk
+// modified to run with c++
 #ifndef MICRO_ROS_PICOSDK
 #define MICRO_ROS_PICOSDK
 
