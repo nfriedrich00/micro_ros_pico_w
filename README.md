@@ -2,17 +2,23 @@
 
 Basic template for micro-ROS with the Raspberry Pi Pico W (via udp4) and c++.
 
-## Description
-
-todo
-
 ## Getting Started
 
 ### Dependencies
 
-* Install the [pico-sdk](https://github.com/raspberrypi/pico-sdk) and the [micro-ROS raspberrypi pico sdk](https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk)
+Install the [pico-sdk](https://github.com/raspberrypi/pico-sdk) and the [micro-ROS raspberrypi pico sdk](https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk):
 
-* todo: compilers?
+```bash
+sudo apt install cmake g++ gcc-arm-none-eabi doxygen libnewlib-arm-none-eabi git python3
+git clone --recurse-submodules https://github.com/raspberrypi/pico-sdk.git $HOME/pico-sdk
+
+git clone https://github.com/micro-ROS/micro_ros_raspberrypi_pico_sdk.git $HOME/micro_ros_raspberrypi_pico_sdk -b jazzy
+mkdir $HOME/micro_ros_raspberrypi_pico_sdk/build
+cd $HOME/micro_ros_raspberrypi_pico_sdk/build
+cmake ..
+make
+```
+
 
 ### Installing
 
@@ -20,22 +26,18 @@ todo
 * Export the path to the pico-sdk and the micro-ros-sdk
 * Build the project
 
-```
+```bash
 git clone https://github.com/nfriedrich00/micro_ros_pico_w.git
 
-export PICO_SDK_PATH=/path-to-your-pico-sdk
-export PICO_MICRO_ROS_SDK_PATH=/path-to-your-micro-ros-sdk
+export PICO_SDK_PATH=$HOME/pico-sdk
+export PICO_MICRO_ROS_SDK_PATH=$HOME/micro_ros_raspberrypi_pico_sdk
 
-mkdir build
-cd build
+mkdir micro_ros_pico_w/build
+cd micro_ros_pico_w/build
 cmake ..
 make
 ```
 
-
-## Help/Troubleshooting
-
-todo
 
 ## Authors
 
